@@ -1,0 +1,58 @@
+{
+    "name": "automation-playwright",
+    "version": "1.0.0",
+    "main": "index.js",
+    "dependencies": {
+        "@babel/eslint-parser": "^7.15.0",
+        "@playwright/test": "^1.14.0",
+        "@testim/chrome-version": "^1.0.7",
+        "axe-playwright": "^1.1.8",
+        "custom-template-generator": "^0.1.2",
+        "expect-axe-playwright": "^1.1.1",
+        "module-alias": "^2.2.2",
+        "playwright": "^1.14.0",
+        "playwright-lighthouse": "^2.0.3"
+    },
+    "devDependencies": {
+        "@testim/root-cause": "^0.1.33",
+        "@testim/testim-cli": "^0.16.2",
+        "allure-commandline": "^2.13.8",
+        "allure-playwright": "^2.0.0-beta.11",
+        "axe-html-reporter": "^2.2.2",
+        "cross-env": "^7.0.3",
+        "dotenv": "^10.0.0",
+        "eslint": "^7.32.0",
+        "eslint-plugin-prettier": "^3.4.0",
+        "merge-dirs": "^0.1.0",
+        "prettier": "2.3.2",
+        "ts-node": "^10.2.0",
+        "typescript": "^4.3.5"
+    },
+    "_moduleAliases": {
+        "@data": "pom/data",
+        "@pages": "pom/pages",
+        "@test": "pom/tests",
+        "@utils": "pom/utils",
+        "@config": "pom/config",
+        "@debuger": "pom/debuger"
+    },
+    "scripts": {
+        "build": "tsc || true",
+        "check-types": "tsc --noemit",
+        "eslint": "eslint . --ext .ts --fix",
+        "lint": "npm run eslint && npm run check-types",
+        "test": "cross-env NODE_ENV=testau playwright test reg",
+        "access-test-qa": "cross-env NODE_ENV=testau ALLURE_RESULTS_DIR=reports/allure-results npx playwright test access --reporter=line,allure-playwright",
+        "reg-test-qa": "cross-env NODE_ENV=testau ALLURE_RESULTS_DIR=reports/allure-results npx playwright test reg --reporter=line,allure-playwright",
+        "e2e-test-qa": "cross-env NODE_ENV=testau ALLURE_RESULTS_DIR=reports/allure-results npx playwright test e2e --reporter=line,allure-playwright",
+        "perf-test-qa": "cross-env NODE_ENV=testau ALLURE_RESULTS_DIR=reports/allure-results npx playwright test perf --reporter=line,allure-playwright",
+        "testim": "npm i -g @testim/testim-cli && testim connect",
+        "record": "cross-env NODE_ENV=testau npx playwright test testim",
+        "debug": "cross-env NODE_ENV=testau npx playwright test tracing",
+        "trace": "cross-env NODE_ENV=testau npx playwright test 'tracing'"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "description": ""
+}

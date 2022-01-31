@@ -1,0 +1,29 @@
+{
+    "plugins": ["prettier"],
+    "parser": "@babel/eslint-parser",
+    "rules": {
+        "prettier/prettier": "error"
+    },
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module",
+        "experimentalObjectRestSpread": true
+    },
+    "settings": {
+        "import/resolver": {
+            "alias": {
+                "map": [
+                    [
+                        "@data",
+                        "@pages",
+                        "@utils",
+                        "@config",
+                        "@tests",
+                        "@debuger"
+                    ]
+                ],
+                "extensions": [".js", ".ts"]
+            }
+        }
+    }
+}
