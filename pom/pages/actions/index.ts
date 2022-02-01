@@ -1,0 +1,8 @@
+export { HeaderPage } from 'pom/pages/actions/header.page'
+export { KeepInTouchSlider } from 'pom/pages/actions/keep.in.touch.slider.page'
+export { LoginPage } from 'pom/pages/actions/login.page'
+export { LoginPopup } from 'pom/pages/actions/login.popup.page'
+export { MyAccountPage } from 'pom/pages/actions/my.account.page'
+export { SignUpPage } from 'pom/pages/actions/sign.up.page'
+export { ProductDetailPage } from 'pom/pages/actions/product.detail.page'
+export { StoresPage } from 'pom/pages/actions/stores.page'

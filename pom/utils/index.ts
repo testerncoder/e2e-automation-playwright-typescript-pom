@@ -1,0 +1,5 @@
+export { getURL } from 'pom/utils/launch'
+export { getAllWebpageLinks } from 'pom/utils/get.all.links'
+export { getAllWebpageImages } from 'pom/utils/get.all.images'
+export { setStoreByName } from 'pom/utils/set.store.by.name'
+export { clickElementByText } from 'pom/utils/get.element.by.text'
